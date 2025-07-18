@@ -15,25 +15,7 @@ chatbot-project
 ```
 
 ## Setup Instructions
-1. Clone the repository to your local machine.
-   ```
-   git clone <repository-url>
-   ```
-2. Navigate to the project directory.
-   ```
-   cd chatbot-project
-   ```
-3. Install the necessary dependencies.
-   ```
-   npm install
-   ```
-
-## Usage
-- Open `public/index.html` in your web browser to view the chatbot interface.
-- Use the input field to send messages to the chatbot.
-
-## Contributing
-Feel free to submit issues or pull requests if you have suggestions or improvements for the project.
-
-## License
-This project is licensed under the MIT License.
+1. node.js 설치 필수
+2. .env 파일을 안에다 만들어 `OPENAI_API_KEY=API 키` 입력
+3. node src/server.js 를 터미널에서 실행
+4. http://localhost:3000 로 접속해서 확인
