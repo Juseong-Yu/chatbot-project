@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>채팅 뷰어</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Arial", sans-serif;
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .chatbot-container {
+      width: 480px;
+      height: 640px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      background-color: rgba(255, 255, 255, 0.3);
+      padding: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header span {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .dark-mode-btn {
+      background-color: #fff7cc;
+      border: none;
+      border-radius: 12px;
+      padding: 4px 10px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .chat-box {
+      flex: 1;
+      padding: 24px 24px 0 24px;
+      font-size: 16px;
+      color: #5c2e00;
+      overflow-y: auto;
+      background: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .quote {
+      margin-bottom: 30px;
+    }
+
+    .input-area {
+      border-top: 1px solid #fff;
+      padding: 16px 24px;
+      display: flex;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .input-area input {
+      flex: 1;
+      padding: 8px 10px;
+      border: none;
+      border-radius: 20px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .input-area button {
+      margin-left: 10px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 20px;
+      background-color: #ffb399;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .input-area button:hover {
+      background-color: #ff9777;
+    }
+    .user-message {
+      background-color: #ffe0b2;
+      color: #5c2e00;
+      padding: 8px 14px;
+      border-radius: 16px 16px 4px 16px;
+      margin-bottom: 8px;
+      align-self: flex-end;
+      max-width: 80%;
+      word-break: break-word;
+      margin-left: 40px;
+      box-shadow: 0 2px 6px rgba(255, 183, 77, 0.08);
+      display: inline-block;
+    }
+    .bot-message {
+      background-color: #fff;
+      color: #5c2e00;
+      padding: 8px 14px;
+      border-radius: 16px 16px 16px 4px;
+      margin-bottom: 8px;
+      align-self: flex-start;
+      max-width: 80%;
+      word-break: break-word;
+      margin-right: 40px;
+      box-shadow: 0 2px 6px rgba(140, 140, 140, 0.08);
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="chatbot-container">
+    <div class="header">
+      <span>🌜 다크 모드</span>
+      <button class="dark-mode-btn">...</button>
+    </div>
+    <div class="chat-box">
+      <div class="quote">
+        <strong>오늘의 명어:</strong> 오늘 할 수 있는 일을 내일도 미료지 마라. - 베냈림 프래랑클린
+      </div>
+    </div>
+    <div class="input-area">
+      <input type="text" placeholder="메시지를 입력하세요..." />
+      <button>보내기</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
